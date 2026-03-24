@@ -4,7 +4,7 @@ import { ArrowRight, Play } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-20 px-6 overflow-hidden">
       {/* Splatter background effect from reference image 3 */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute top-1/4 left-0 w-[40%] h-[40%] bg-pink-400/30 blur-[100px] rounded-full mix-blend-multiply" />
