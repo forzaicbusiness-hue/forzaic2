@@ -5,6 +5,39 @@ import { Mail, Instagram, Twitter, Linkedin } from 'lucide-react';
 export const About: React.FC = () => {
   return (
     <footer id="about" className="py-24 px-6 relative z-10 bg-black text-white rounded-t-[4rem] overflow-hidden">
+      {/* Dynamic Red Lighting Style Flow */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Flowing light streaks (Shooting Stars) */}
+        <motion.div
+          animate={{
+            x: ['-100%', '200%'],
+            y: ['-50%', '150%'],
+            opacity: [0, 0.4, 0]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 0
+          }}
+          className="absolute top-0 left-0 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-red-500 to-transparent blur-[2px] rotate-[35deg] origin-left"
+        />
+        <motion.div
+          animate={{
+            x: ['-100%', '200%'],
+            y: ['-20%', '120%'],
+            opacity: [0, 0.3, 0]
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 4
+          }}
+          className="absolute top-1/4 left-0 w-[400px] h-[1px] bg-gradient-to-r from-transparent via-red-600 to-transparent blur-[3px] rotate-[35deg] origin-left"
+        />
+      </div>
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
           <div>

@@ -34,26 +34,8 @@ export const BackgroundEffects: React.FC = () => {
         style={{ background: 'linear-gradient(135deg, #ff4d4d, #4facfe)' }}
       />
 
-      {/* Subtle Red Streaks */}
-      <div className="absolute inset-0 overflow-hidden opacity-40">
-        <motion.div 
-          animate={{ x: [-100, 100], opacity: [0.3, 0.7, 0.3] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 -left-1/4 w-[150%] h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent transform -rotate-12" 
-        />
-        <motion.div 
-          animate={{ x: [100, -100], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute top-3/4 -right-1/4 w-[150%] h-px bg-gradient-to-r from-transparent via-red-400 to-transparent transform rotate-6" 
-        />
-        <motion.div 
-          animate={{ y: [-50, 50], opacity: [0.2, 0.5, 0.2] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 5 }}
-          className="absolute top-1/2 left-1/3 w-[2px] h-[150%] bg-gradient-to-b from-transparent via-red-600 to-transparent transform -skew-x-12" 
-        />
-      </div>
 
-      {/* Light Field/Beam Texture */}
+{/* Light Field/Beam Texture */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-black to-transparent transform -skew-x-12" />
         <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-black to-transparent transform skew-x-12" />
