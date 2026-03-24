@@ -19,7 +19,8 @@ export const LogoMarquee: React.FC = () => {
                 className="text-2xl font-bold tracking-tighter opacity-30 hover:opacity-100 transition-all duration-500 cursor-default flex group/word"
               >
                 <span className="group-hover/word:text-red-500 transition-colors duration-500">MOT</span>
-                <span className="group-hover/word:text-black transition-colors duration-500">ION.</span>
+                <span className="group-hover/word:text-black transition-colors duration-500">ION</span>
+                <span className="text-red-500">.</span>
               </span>
             ))}
           </div>
