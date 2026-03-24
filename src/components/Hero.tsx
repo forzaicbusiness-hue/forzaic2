@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Play } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -42,35 +41,16 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-0 leading-relaxed"
         >
           We combine data-driven strategy with experimental design to deliver 
           media solutions that actually convert.
         </motion.p>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="flex flex-wrap items-center justify-center gap-4"
-        >
-          <button className="relative group px-8 py-4 bg-black text-white rounded-full font-bold hover:scale-105 transition-all active:scale-95 flex items-center gap-2 shadow-xl shadow-black/20 overflow-hidden">
-            {/* Border beam effect */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
-              <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_300deg,#ffffff_360deg)] animate-[spin_3s_linear_infinite]" />
-            </div>
-            <span className="relative z-10 flex items-center gap-2">
-              Start a project <ArrowRight className="w-5 h-5" />
-            </span>
-          </button>
-          <button className="px-8 py-4 bg-white border border-black/10 rounded-full font-bold hover:bg-zinc-50 transition-all flex items-center gap-2">
-            <Play className="w-4 h-4 fill-black" /> Watch Showreel
-          </button>
-        </motion.div>
       </div>
 
       {/* Floating Cards List from reference image 1 */}
-      <div className="relative mt-20 w-full max-w-7xl mx-auto">
+      <div className="relative mt-16 w-full max-w-7xl mx-auto">
         <div className="flex justify-center -space-x-12 md:-space-x-20">
           {[
             {
