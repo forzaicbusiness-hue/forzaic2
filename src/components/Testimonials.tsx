@@ -4,28 +4,28 @@ import { motion } from 'motion/react';
 const testimonials = [
   {
     name: 'Kate Davis',
-    company: 'Hulu',
+    company: '',
     rating: 4.9,
     content: '"Forzaic completely transformed how our brand shows up online. The creative direction was exactly what we needed — bold, clear, and built around real data."',
     rotation: -2
   },
   {
     name: 'Martin Kazlauskas',
-    company: 'HBO Max',
+    company: '',
     rating: 4.8,
     content: '"From strategy to execution, the team at Forzaic delivered beyond expectations. Our digital presence has never been sharper."',
     rotation: 1
   },
   {
     name: 'Sanjay Sharma',
-    company: 'Disney+',
+    company: '',
     rating: 4.9,
     content: '"Working with Forzaic felt like a genuine partnership. They understood our goals from day one and the results speak for themselves."',
     rotation: -1
   },
   {
     name: 'Tawanna Afumba',
-    company: 'Starz',
+    company: '',
     rating: 4.7,
     content: '"The new website and media strategy drove a significant uplift in engagement. Forzaic is the real deal — innovative, professional, and results-focused."',
     rotation: 2
