@@ -10,9 +10,7 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-center relative">
         <div className="absolute left-0 flex items-center gap-2 group cursor-pointer">
-          <span className="text-2xl font-bold tracking-tighter group-hover:scale-110 transition-transform">
-            FZ<span className="text-zinc-400">.</span>
-          </span>
+          <img src="/logo.png" alt="Forzaic" className="h-8 w-auto group-hover:scale-110 transition-transform" />
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
