@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 
 export const BackgroundEffects: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -13,8 +13,6 @@ export const BackgroundEffects: React.FC = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 1000], [0, -150]);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -23,8 +21,8 @@ export const BackgroundEffects: React.FC = () => {
            style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       
       {/* Soft Animated Gradient */}
-      <motion.div 
-        className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full blur-[120px] opacity-30"
+      <motion.div
+        className="hidden md:block absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full blur-[120px] opacity-30"
         animate={{
           x: [0, 50, 0],
           y: [0, 30, 0],
@@ -36,20 +34,11 @@ export const BackgroundEffects: React.FC = () => {
 
 
 {/* Light Field/Beam Texture */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
+      <div className="hidden md:block absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-black to-transparent transform -skew-x-12" />
         <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-black to-transparent transform skew-x-12" />
       </div>
 
-      {/* Slow Parallax Abstract Shapes */}
-      <motion.div 
-        style={{ y: y1 }}
-        className="absolute top-[20%] right-[10%] w-64 h-64 border border-black/5 rounded-full"
-      />
-      <motion.div 
-        style={{ y: y2 }}
-        className="absolute top-[60%] left-[5%] w-48 h-48 border border-black/5 rotate-45"
-      />
 
       {/* Cursor Proximity Glow */}
       <div 
