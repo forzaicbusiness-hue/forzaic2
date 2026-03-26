@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 
 export const BackgroundEffects: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const { scrollY } = useScroll();
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -31,13 +30,6 @@ export const BackgroundEffects: React.FC = () => {
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
         style={{ background: 'linear-gradient(135deg, #ff4d4d, #4facfe)' }}
       />
-
-
-{/* Light Field/Beam Texture */}
-      <div className="hidden md:block absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-black to-transparent transform -skew-x-12" />
-        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-black to-transparent transform skew-x-12" />
-      </div>
 
 
       {/* Cursor Proximity Glow */}
